@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="300" viewBox="0 0 900 300">
+  <rect width="900" height="300" fill="#f7f9fc"/>
+  <text x="450" y="32" text-anchor="middle" font-family="Arial,Microsoft YaHei" font-size="20" fill="#1f2937">Transformer: direct attention between positions</text>
+  <g font-family="Arial,Microsoft YaHei" font-size="16" fill="#111827">
+    <rect x="55" y="105" width="150" height="65" rx="8" fill="#dbeafe" stroke="#2563eb"/>
+    <text x="130" y="133" text-anchor="middle">输入 token</text><text x="130" y="155" text-anchor="middle" font-size="13">Input tokens</text>
+    <rect x="350" y="90" width="200" height="95" rx="8" fill="#dcfce7" stroke="#16a34a"/>
+    <text x="450" y="128" text-anchor="middle">多头注意力</text><text x="450" y="151" text-anchor="middle" font-size="13">Multi-head attention</text>
+    <rect x="695" y="105" width="150" height="65" rx="8" fill="#fef3c7" stroke="#d97706"/>
+    <text x="770" y="133" text-anchor="middle">上下文表示</text><text x="770" y="155" text-anchor="middle" font-size="13">Contextual states</text>
+  </g>
+  <g stroke="#374151" stroke-width="3" fill="none" marker-end="url(#arrow)">
+    <path d="M205 138 C260 80, 310 80, 350 120"/>
+    <path d="M205 150 C270 210, 315 205, 350 155"/>
+    <path d="M550 138 L695 138"/>
+  </g>
+  <text x="450" y="245" text-anchor="middle" font-family="Arial,Microsoft YaHei" font-size="15" fill="#4b5563">No recurrence: positions can interact in parallel</text>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#374151"/></marker></defs>
+</svg>

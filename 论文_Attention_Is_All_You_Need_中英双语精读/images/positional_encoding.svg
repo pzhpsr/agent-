@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="300" viewBox="0 0 900 300">
+  <rect width="900" height="300" fill="#fff"/>
+  <text x="450" y="28" text-anchor="middle" font-family="Arial,Microsoft YaHei" font-size="20" fill="#1f2937">Sinusoidal positional encoding</text>
+  <g stroke="#e5e7eb" stroke-width="1">
+    <path d="M70 70 H830 M70 120 H830 M70 170 H830 M70 220 H830"/>
+  </g>
+  <path d="M70 145 C120 55,170 235,220 145 S320 55,370 145 S470 235,520 145 S620 55,670 145 S770 235,820 145" fill="none" stroke="#2563eb" stroke-width="3"/>
+  <path d="M70 145 C140 100,210 190,280 145 S420 100,490 145 S630 190,700 145 S770 100,820 145" fill="none" stroke="#ea580c" stroke-width="3"/>
+  <text x="90" y="260" font-family="Arial,Microsoft YaHei" font-size="14" fill="#2563eb">dimension 2i: sin</text>
+  <text x="310" y="260" font-family="Arial,Microsoft YaHei" font-size="14" fill="#ea580c">dimension 2i+1: cos</text>
+  <text x="620" y="260" font-family="Arial,Microsoft YaHei" font-size="14" fill="#4b5563">position → periodic signature</text>
+</svg>

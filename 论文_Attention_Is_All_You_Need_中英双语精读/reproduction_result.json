@@ -1,0 +1,53 @@
+{
+  "device": "cuda",
+  "torch_version": "2.11.0+cu128",
+  "gpu": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "seed": 2026,
+  "steps": 1500,
+  "model": {
+    "d_model": 64,
+    "heads": 4,
+    "layers": 2,
+    "parameters": 172448
+  },
+  "initial_loss": 3.63002,
+  "final_loss": 0.00366,
+  "token_accuracy": 1.0,
+  "sequence_accuracy": 1.0,
+  "seconds": 19.201,
+  "example": {
+    "source": [
+      30,
+      31,
+      14,
+      21,
+      24,
+      20,
+      28,
+      4
+    ],
+    "target": [
+      30,
+      31,
+      14,
+      21,
+      24,
+      20,
+      28,
+      4,
+      2
+    ],
+    "prediction": [
+      30,
+      31,
+      14,
+      21,
+      24,
+      20,
+      28,
+      4,
+      2
+    ]
+  },
+  "task": "copy source tokens and append EOS; educational reproduction, not WMT14 BLEU."
+}
