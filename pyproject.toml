@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "xuexi-langchain-lab"
+version = "0.1.0"
+description = "七天 LangChain 互动实战课"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "langchain>=1,<2",
+  "langchain-openai>=1,<2",
+  "langchain-text-splitters>=1,<2",
+  "langchain-huggingface>=1,<2",
+  "sentence-transformers>=5,<6",
+  "python-dotenv>=1,<2",
+  "httpx>=0.28,<1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10"]
+
+[project.scripts]
+xuexi = "xuexi_lab.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["xuexi_lab*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

@@ -1,0 +1,14 @@
+[
+  {"id":"calc_dev","split":"dev","group":"tools","mode":"basic","question":"必须使用 calculate 计算 (18+24)/2，给出结果。","required_tools":["calculate"],"expected":["21"]},
+  {"id":"divide_zero_dev","split":"dev","group":"tools","mode":"basic","question":"调用 calculate 计算 1/0，根据工具结果说明问题，不能编造数值。","required_tools":["calculate"],"expected":["零"]},
+  {"id":"db_dev","split":"dev","group":"database","mode":"tools","question":"用 query_expenses 查询差旅类别的金额，给出笔数与币种。","required_tools":["query_expenses"],"expected":["550","CNY"]},
+  {"id":"empty_dev","split":"dev","group":"database","mode":"tools","question":"查询类别 不存在 的支出，说明记录是否为空。不要把 all 的数据当作此类别。","required_tools":["query_expenses"],"expected":["0"]},
+  {"id":"rag_dev","split":"dev","group":"rag","mode":"rag","question":"根据知识库，投影仪最长连续借用多少天？引用文档名。","required_tools":["search_knowledge"],"expected":["3","03_设备借用.md"]},
+  {"id":"rag_unknown_dev","split":"dev","group":"rag","mode":"rag","question":"根据知识库，投影仪采购单价是多少？如果没有信息，请明确回答“知识库未提供”，不要猜数字。","required_tools":["search_knowledge"],"expected":["知识库未提供"]},
+  {"id":"collab_dev","split":"dev","group":"collaboration","mode":"collaborate","question":"根据知识库回答报销材料不完整时应怎么处理，引用文档名。请不要编造审批结果。","required_tools":["search_knowledge"],"expected":["02_报销材料.md"],"required_stages":["researcher","reviewer"]},
+  {"id":"workflow_dev","split":"dev","group":"collaboration","mode":"plan","question":"读取 01_统计规则.md，查询可报销类别的实际金额，计算增加10%预留后的金额，给出CNY及依据。","required_tools":["read_document","query_expenses","calculate"],"expected":["759","CNY"],"required_stages":["planner","executor"]},
+  {"id":"calc_holdout","split":"holdout","group":"tools","mode":"basic","question":"使用 calculate 计算 (7+5)*3-8，给出结果。","required_tools":["calculate"],"expected":["28"]},
+  {"id":"db_holdout","split":"holdout","group":"database","mode":"tools","question":"用 query_expenses 查询办公类别总额，给出笔数与币种。","required_tools":["query_expenses"],"expected":["140","CNY"]},
+  {"id":"rag_holdout","split":"holdout","group":"rag","mode":"rag","question":"根据知识库，工单草稿至少需要什么信息？引用文档名。","required_tools":["search_knowledge"],"expected":["标题","描述","05_工单规则.md"]},
+  {"id":"collab_holdout","split":"holdout","group":"collaboration","mode":"collaborate","question":"根据知识库说明多台电脑同时无法联网时应该做什么，引用文档名。","required_tools":["search_knowledge"],"expected":["管理员","04_网络排障.md"],"required_stages":["researcher","reviewer"]}
+]
